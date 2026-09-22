@@ -1,0 +1,15 @@
+node_modules
+dist
+.DS_Store
+*.local
+
+# Personal master CV: full contact details, never published or pushed.
+# The site serves src/assets/Lewis_Robinson_CV_web.docx instead.
+/Lewis_Robinson_CV.docx
+
+# AI tooling artefacts
+.claude/
+.cursor/
+.aider*
+CLAUDE.md
+AGENTS.md
