@@ -24,8 +24,8 @@ export default function Story() {
             That has meant building for other people, not just for marks. A gym in the North East
             needed its membership payments to stop being a spreadsheet problem, so I built them a
             site that issues every member their own standing order reference, plus a tool that
-            reconciles the bank statements against it. Restrum is a full marketplace, Spring Boot
-            over PostgreSQL with a React front end, live at restrum.uk.
+            reconciles the bank statements against it. Restrum is a full marketplace, Laravel over
+            MySQL and Elasticsearch with a React front end, live at restrum.uk.
           </p>
           <p>
             I came to computing after a music degree and finished the MSc with a Distinction. I

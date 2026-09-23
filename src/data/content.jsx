@@ -19,7 +19,7 @@ export const factFile = [
   ['Based', 'Newcastle upon Tyne'],
   ['Studied', 'MSc Computer Science, Distinction'],
   ['Before that', 'BA (Hons) Contemporary Music'],
-  ['Weapon of choice', 'Java & Spring Boot'],
+  ['Weapon of choice', 'Laravel & Spring Boot'],
   ['Certified', 'AWS Developer Associate'],
   ['Shipped & live', 'restrum.uk, staticgrind.com'],
 ];
@@ -50,13 +50,15 @@ export const mandateDiagram = `STANDING ORDER REFERENCE
 CSV / PDF ─▶ parsed client-side
           ─▶ matched to a member`;
 
-export const receiptEndpoints = [
-  ['POST', '/auth/register'],
-  ['POST', '/auth/login'],
-  ['GET', '/customers/me'],
-  ['PUT', '/customers/{id}'],
-  ['POST', '/orders'],
-];
+export const pipelineDiagram = `CLAIM ─▶ LOCK ROW ─▶ COMMIT
+
+┌─────────┬─────────┬─────────┐
+│  MAIL   │ NOTIFY  │  INDEX  │
+└─────────┴─────────┴─────────┘
+      REDIS QUEUE · OWN CONTAINER
+
+SYNC   stock never oversold
+ASYNC  everything else`;
 
 export const commissions = [
   {
@@ -106,14 +108,14 @@ export const exhibits = [
       </>
     ),
     checks: [
-      'RESTful API and service layer in Spring Boot over PostgreSQL',
-      'JWT authentication, account and session management',
-      'React front end consuming the API',
-      'Deployed to AWS, EC2 with PostgreSQL via Neon',
+      'Laravel / PHP REST API with Sanctum auth and real-time buyer-seller messaging over Reverb (WebSockets)',
+      'Stripe Connect for split marketplace payments between buyers and sellers',
+      'Elasticsearch-backed search with custom analyzers for prefixes, slang and model numbers, roughly 3x faster than the SQL path it replaced',
+      'React 19 / TypeScript front end, deployed via Docker Compose to a VPS behind Cloudflare',
     ],
     link: { href: 'https://restrum.uk', label: 'OPEN THE LIVE SITE ↗' },
     specimen: [
-      { k: 'STACK', v: 'Spring Boot · PostgreSQL · React' },
+      { k: 'STACK', v: 'Laravel · PHP · MySQL · Elasticsearch' },
       { k: 'ROLE', v: 'Sole engineer' },
       { k: 'DATE', v: 'May to Aug 2026' },
       { k: 'STATUS', v: 'LIVE', chip: true, chipVariant: 'live' },
@@ -149,41 +151,43 @@ export const exhibits = [
     visual: 'glitch',
   },
   {
-    id: 'whistlestop',
+    id: 'seedle',
     letter: 'C',
     tint: 'c',
-    title: 'WhistleStop Coffee Hut',
-    sub: 'Mobile ordering platform · five-person Agile team',
+    title: 'Seedle',
+    sub: 'Gardening swap and planning platform · Laravel, MySQL, Elasticsearch',
     prose: (
       <>
-        A mobile-optimised ordering platform built by a team of five. I owned the backend side of it,
-        the authentication and customer management, and wired it up to a UI the team prototyped in
-        Figma.
+        A gardening community and planning tool: pass on spare seeds, cuttings and tools to other
+        growers, lay out a plot to scale with companion-planting conflicts flagged as you drag plants
+        around, and log a harvest against the bed that grew it. Nothing is bought or sold, everything
+        is swapped or given away.
       </>
     ),
     checks: [
-      'Java, Spring Boot and MySQL behind the ordering flow',
-      'Registration, login and JWT session handling',
-      'Git-based collaboration, sprints, and integration against a Figma prototype',
+      'Laravel 13 / PHP 8.4 REST API with Sanctum auth and service classes for search, checkout and garden logic',
+      'Elasticsearch-backed faceted search with a plain-MySQL fallback, exercised directly by the test suite',
+      'Claiming splits a row-locked DB transaction from an async pipeline of Redis-queued listeners (confirmation, notification, search reindex), with the queue worker scaling independently of the web tier',
+      '129 PHPUnit tests, GitHub Actions CI running PHPUnit and Pint, Docker Compose across 8 services',
     ],
-    link: null,
+    link: { href: 'https://github.com/lewisr23/Seedle', label: 'VIEW THE REPO ↗' },
     specimen: [
-      { k: 'STACK', v: 'Java · Spring Boot · MySQL' },
-      { k: 'ROLE', v: 'Backend developer, team of 5' },
-      { k: 'DATE', v: 'Feb to May 2026' },
-      { k: 'STATUS', v: 'DELIVERED', chip: true },
+      { k: 'STACK', v: 'Laravel · PHP · MySQL · Elasticsearch · Redis' },
+      { k: 'ROLE', v: 'Sole engineer' },
+      { k: 'DATE', v: 'Sept 2026' },
+      { k: 'STATUS', v: 'BUILT', chip: true },
     ],
-    visual: 'receipt',
+    visual: 'pipeline',
   },
 ];
 
 export const skills = [
-  ['Backend', 'Java, Spring Boot, Spring Security, JPA / Hibernate, RESTful API design, service-layer architecture'],
-  ['Databases', 'PostgreSQL, MySQL, relational schema design'],
-  ['Frontend', 'React, JavaScript, HTML / CSS'],
-  ['Languages', 'Java, Python, JavaScript, SQL, HTML / CSS'],
-  ['Tools', 'Git, Maven, Vite, pdf.js, Google Cloud Platform, AWS'],
-  ['Concepts', 'OOP, MVC, Agile, authentication & session management, concurrency'],
+  ['Backend', 'Laravel, Spring Boot, Spring Security, Java, JPA / Hibernate, RESTful API design, service-layer architecture'],
+  ['Databases', 'MySQL, PostgreSQL, Elasticsearch, Redis, relational schema design'],
+  ['Frontend', 'React, JavaScript, HTML / CSS, SCSS'],
+  ['Languages', 'PHP, Java, Python, JavaScript, SQL, HTML / CSS'],
+  ['Tools', 'Docker, Composer, Git, GitHub Actions (CI), PHPUnit, Maven, Vite, pdf.js, Google Cloud Platform, AWS'],
+  ['Concepts', 'OOP, MVC, Agile, authentication & session management, concurrency, distributed systems'],
 ];
 
 export const ledger = [
@@ -215,10 +219,10 @@ export const ledger = [
 ];
 
 export const tickerA = [
-  'JAVA', 'SPRING BOOT', 'POSTGRESQL', 'SPRING SECURITY', 'REACT', 'JPA / HIBERNATE',
-  'MYSQL', 'REST', 'JWT', 'GIT', 'MAVEN', 'AWS',
+  'LARAVEL', 'PHP', 'JAVA', 'SPRING BOOT', 'MYSQL', 'POSTGRESQL', 'ELASTICSEARCH', 'SPRING SECURITY',
+  'REACT', 'JPA / HIBERNATE', 'REST', 'SANCTUM', 'GIT', 'DOCKER', 'MAVEN', 'AWS',
 ];
 
 export const tickerB = [
-  'SCHEMA DESIGN', 'SERVICE LAYERS', 'AUTH & SESSIONS', 'CONCURRENCY', 'OOP', 'MVC', 'AGILE',
+  'SCHEMA DESIGN', 'SERVICE LAYERS', 'AUTH & SESSIONS', 'CONCURRENCY', 'DISTRIBUTED SYSTEMS', 'OOP', 'MVC', 'AGILE',
 ];

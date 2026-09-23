@@ -1,6 +1,5 @@
 import GlitchVideo from './GlitchVideo.jsx';
-import Receipt from './Receipt.jsx';
-import { schemaDiagram, mandateDiagram } from '../data/content.jsx';
+import { schemaDiagram, mandateDiagram, pipelineDiagram } from '../data/content.jsx';
 import { useReveal } from '../hooks/useReveal.js';
 
 function Visual({ kind }) {
@@ -14,8 +13,12 @@ function Visual({ kind }) {
       <pre className="schema" aria-label="Standing order reference format">{mandateDiagram}</pre>
     );
   }
+  if (kind === 'pipeline') {
+    return (
+      <pre className="schema" aria-label="Claim and checkout pipeline">{pipelineDiagram}</pre>
+    );
+  }
   if (kind === 'glitch') return <GlitchVideo />;
-  if (kind === 'receipt') return <Receipt />;
   return null;
 }
 

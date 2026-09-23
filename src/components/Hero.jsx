@@ -30,7 +30,7 @@ export default function Hero() {
         <div className="hero__col">
           <p className="lede">
             Backend-leaning full-stack engineer. I design the data model first, build the API around
-            it in Java and Spring Boot, then wire the whole thing to a React front end and actually
+            it in Laravel or Spring Boot, then wire the whole thing to a React front end and actually
             ship it.
           </p>
           <p className="hero__p">

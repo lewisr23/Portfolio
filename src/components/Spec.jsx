@@ -28,7 +28,7 @@ export default function Spec() {
         <div className="rule rule--thick" />
         <p className="label__foot">
           Not a significant source of framework tourism. Percentages based on a diet of one paying
-          client, one marketplace, one team project and one thing shipped for the fun of it.
+          client, one marketplace, one solo build and one thing shipped for the fun of it.
         </p>
       </div>
     </section>
