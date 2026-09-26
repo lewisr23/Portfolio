@@ -1,6 +1,6 @@
 export const profile = {
   name: ['LEWIS', 'ROBINSON'],
-  dateline: ['NEWCASTLE UPON TYNE', 'MSc COMPUTER SCIENCE, DISTINCTION', 'AVAILABLE NOW'],
+  dateline: ['NEWCASTLE UPON TYNE', 'MSc COMPUTER SCIENCE, DISTINCTION'],
   email: 'lewisrobinson.cs@gmail.com',
   phone: '07923 529451',
   phoneHref: 'tel:07923529451',
@@ -19,7 +19,7 @@ export const factFile = [
   ['Based', 'Newcastle upon Tyne'],
   ['Studied', 'MSc Computer Science, Distinction'],
   ['Before that', 'BA (Hons) Contemporary Music'],
-  ['Weapon of choice', 'Laravel & Spring Boot'],
+  ['Stack', 'Laravel & Spring Boot'],
   ['Certified', 'AWS Developer Associate'],
   ['Shipped & live', 'restrum.uk, staticgrind.com'],
 ];

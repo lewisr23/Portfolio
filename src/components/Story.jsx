@@ -39,7 +39,7 @@ export default function Story() {
         </blockquote>
 
         <div ref={factRef} className={`factfile ${factClass}`}>
-          <h3 className="factfile__title">FACT FILE</h3>
+          <h3 className="factfile__title">INFO</h3>
           <ul>
             {factFile.map(([key, value]) => (
               <li key={key}>

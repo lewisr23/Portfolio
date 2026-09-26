@@ -5,7 +5,7 @@ export default function Masthead({ onSwapInk }) {
     <header className="masthead">
       <a className="monogram" href="#top">LR</a>
       <p className="masthead__meta">
-        PORTFOLIO<span className="sep">/</span>ISSUE 01<span className="sep">/</span>NE1
+        PORTFOLIO
       </p>
       <nav className="masthead__nav">
         {NAV.map((item) => (
