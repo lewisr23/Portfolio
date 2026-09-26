@@ -7,6 +7,7 @@ dist
 # never published or pushed. The site serves src/assets/Lewis_Robinson_CV_web.docx instead.
 /Lewis_Robinson_*.docx
 /Lewis_Robinson_*.pdf
+/CV_anonymous.pdf
 ~$*.docx
 
 # Per-job tailored CV/cover letter drafts, one subfolder per application.
