@@ -1,16 +1,17 @@
 /* ═══════════════════════════════════════════════════════
-   LEWIS ROBINSON / riso/zine press sheet
-   Palette swaps live on :root[data-ink]
+   LEWIS ROBINSON / black and white press sheet
+   Light and dark ink live on :root[data-ink]
    ═══════════════════════════════════════════════════════ */
 
 :root{
-  --paper:  #f2ece0;
-  --card:   #fbf8f1;
-  --ink:    #141210;
-  --a:      #ff4d13;   /* vermilion */
-  --b:      #1731ff;   /* cobalt    */
-  --c:      #ff2e88;   /* fluoro pink */
-  --hair:   rgba(20,18,16,.24);
+  --paper:  #f6f6f4;
+  --card:   #ffffff;
+  --ink:    #111111;
+  --a:      var(--ink);
+  --b:      var(--ink);
+  --c:      var(--ink);
+  --ghost:  #b8b8b8;   /* offset copies behind the name */
+  --hair:   rgba(17,17,17,.22);
 
   --display: 'Anton', 'Haettenschweiler', 'Arial Narrow', sans-serif;
   --serif:   'Newsreader', Georgia, 'Times New Roman', serif;
@@ -21,22 +22,12 @@
   --pop-sm: 4px 4px 0 var(--ink);
 }
 
-:root[data-ink="garden"]{
-  --paper: #eef0e2;
-  --card:  #f9faf0;
-  --a: #00893f;
-  --b: #5b28e0;
-  --c: #ffc400;
-}
-
 :root[data-ink="night"]{
-  --paper: #17150f;
-  --card:  #221f17;
-  --ink:   #f4efe2;
-  --a: #ffd400;
-  --b: #00d1c1;
-  --c: #ff3d7f;
-  --hair: rgba(244,239,226,.3);
+  --paper: #111111;
+  --card:  #1a1a1a;
+  --ink:   #f2f2f2;
+  --ghost: #4a4a4a;
+  --hair: rgba(242,242,242,.26);
 }
 
 *,*::before,*::after{ box-sizing:border-box; }
@@ -126,11 +117,11 @@ img{ max-width:100%; }
 .masthead__nav a:hover{ background:var(--ink); color:var(--paper); }
 .ink-swap{
   font-family:var(--mono); font-size:.7rem; font-weight:600; letter-spacing:.14em;
-  background:var(--a); color:var(--ink);
+  background:var(--ink); color:var(--paper);
   border:none; border-left:var(--edge) solid var(--ink);
   padding:0 16px; cursor:pointer;
 }
-.ink-swap:hover{ background:var(--b); color:var(--paper); }
+.ink-swap:hover{ background:var(--paper); color:var(--ink); }
 
 /* ── shared slab button ───────────────────────────────── */
 .slab{
@@ -145,7 +136,7 @@ img{ max-width:100%; }
 }
 .slab:hover{ transform:translate(-3px,-3px); box-shadow:7px 7px 0 var(--ink); background:var(--c); color:var(--paper); }
 .slab:active{ transform:translate(2px,2px); box-shadow:1px 1px 0 var(--ink); }
-.slab--fill{ background:var(--a); }
+.slab--fill{ background:var(--ink); color:var(--paper); }
 
 /* ── hero ─────────────────────────────────────────────── */
 .hero{ padding: 34px clamp(16px,4vw,54px) 10px; }
@@ -185,8 +176,8 @@ img{ max-width:100%; }
   mix-blend-mode:multiply;
   transition: transform .25s cubic-bezier(.2,.8,.3,1);
 }
-.mega__line::before{ color:var(--a); transform:translate(-.016em,.005em); }
-.mega__line::after{  color:var(--b); transform:translate(.012em,-.004em); }
+.mega__line::before{ color:var(--ghost); transform:translate(-.016em,.005em); }
+.mega__line::after{  color:var(--ghost); transform:translate(.012em,-.004em); }
 /* Hovering either word moves the whole title, but the trigger is still the
    glyphs themselves, never the empty space beside them.
    Keep the spread modest: push much past this and the offset copies fill the
@@ -247,7 +238,7 @@ img{ max-width:100%; }
   margin: 30px 0 0;
 }
 .ticker--a{ background:var(--ink); color:var(--paper); }
-.ticker--b{ background:var(--b); color:var(--paper); }
+.ticker--b{ background:var(--paper); color:var(--ink); }
 .ticker__track{ display:flex; width:max-content; animation: slide 34s linear infinite; }
 .ticker__track--rev{ animation-duration:26s; animation-direction:reverse; }
 .ticker__group{
@@ -255,8 +246,8 @@ img{ max-width:100%; }
   font-family:var(--display); font-size:1.25rem; letter-spacing:.06em; text-transform:uppercase;
   white-space:nowrap;
 }
-.ticker--a b{ color:var(--a); }
-.ticker--b b{ color:var(--paper); opacity:.55; }
+.ticker--a b,
+.ticker--b b{ opacity:.55; }
 @keyframes slide{ to{ transform:translateX(-50%); } }
 
 /* ── plates & rubrics ─────────────────────────────────── */
@@ -395,7 +386,6 @@ img{ max-width:100%; }
   padding:3px 8px; font-size:.64rem; letter-spacing:.14em;
 }
 .chip--live{ background:var(--b); }
-.chip--wip{ background:var(--a); color:var(--ink); }
 
 .schema{
   margin:0; padding:16px;
@@ -464,7 +454,7 @@ img{ max-width:100%; }
 
 /* ── contact ──────────────────────────────────────────── */
 .contact{ background:var(--ink); color:var(--paper); position:relative; }
-.rubric--inv .rubric__no{ background:var(--a); color:var(--ink); }
+.rubric--inv .rubric__no{ background:var(--paper); color:var(--ink); }
 .rubric--inv .rubric__rule{ border-top-color:var(--paper); }
 .contact__intro{ max-width:56ch; font-size:1.1rem; }
 .contact__mail{
@@ -476,9 +466,9 @@ img{ max-width:100%; }
   color:var(--paper);
   margin:22px 0;
   word-break:break-word;
-  transition:color .12s;
+  transition:opacity .12s;
 }
-.contact__mail:hover{ color:var(--a); }
+.contact__mail:hover{ opacity:.65; }
 .contact__links{ display:flex; flex-wrap:wrap; gap:14px; }
 .contact__links a{
   display:inline-block;
@@ -493,10 +483,10 @@ img{ max-width:100%; }
 .postmark{
   position:absolute; right:clamp(16px,4vw,54px); bottom:clamp(30px,5vw,60px);
   transform:rotate(-14deg);
-  border:3px double var(--a); border-radius:50%;
+  border:3px double var(--paper); border-radius:50%;
   width:150px; height:150px;
   display:flex; flex-direction:column; align-items:center; justify-content:center;
-  color:var(--a);
+  color:var(--paper);
   font-family:var(--mono); font-size:.6rem; letter-spacing:.18em;
   text-align:center;
   opacity:.9;

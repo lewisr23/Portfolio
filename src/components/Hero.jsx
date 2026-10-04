@@ -29,9 +29,9 @@ export default function Hero() {
       <div className="hero__body">
         <div className="hero__col">
           <p className="lede">
-            Backend-leaning full-stack engineer. I design the data model first, build the API around
-            it in Laravel or Spring Boot, then wire the whole thing to a React front end and actually
-            ship it.
+            Software engineer working across Java and Spring Boot, Python and FastAPI, React and
+            Laravel. I care about clean, secure, well-tested code, and I take things from the first
+            conversation about requirements all the way to something live.
           </p>
           <p className="hero__p">
             MSc with Distinction, AWS Developer Associate certified, and four things shipped this

@@ -12,7 +12,7 @@ export default function Contact() {
       <Rubric no="06" title="Get In Touch" inverted />
 
       <p className="contact__intro">
-        Open to graduate and junior backend or full-stack roles. Quickest route is email, and I
+        Open to graduate and junior software engineering roles. Quickest route is email, and I
         answer everything.
       </p>
 

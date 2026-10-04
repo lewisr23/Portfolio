@@ -1,13 +1,13 @@
 import { useState } from 'react';
 
-export const INKS = ['riso', 'garden', 'night'];
+export const INKS = ['paper', 'night'];
 
 function applyInk(ink) {
   if (ink === INKS[0]) document.documentElement.removeAttribute('data-ink');
   else document.documentElement.setAttribute('data-ink', ink);
 }
 
-/** Cycles the press inks by stamping data-ink on <html>; CSS does the rest. */
+/** Toggles light and dark ink by stamping data-ink on <html>; CSS does the rest. */
 export function useInk() {
   const [ink, setInk] = useState(INKS[0]);
 

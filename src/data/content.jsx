@@ -1,6 +1,6 @@
 export const profile = {
   name: ['LEWIS', 'ROBINSON'],
-  dateline: ['NEWCASTLE UPON TYNE', 'MSc COMPUTER SCIENCE, DISTINCTION'],
+  dateline: ['SOFTWARE ENGINEER', 'NEWCASTLE UPON TYNE', 'MSc COMPUTER SCIENCE, DISTINCTION'],
   email: 'lewisrobinson.cs@gmail.com',
   phone: '07923 529451',
   phoneHref: 'tel:07923529451',
@@ -19,7 +19,7 @@ export const factFile = [
   ['Based', 'Newcastle upon Tyne'],
   ['Studied', 'MSc Computer Science, Distinction'],
   ['Before that', 'BA (Hons) Contemporary Music'],
-  ['Stack', 'Laravel & Spring Boot'],
+  ['Works in', 'Java, Python, TypeScript, PHP'],
   ['Certified', 'AWS Developer Associate'],
   ['Shipped & live', 'restrum.uk, staticgrind.com'],
 ];
@@ -182,12 +182,12 @@ export const exhibits = [
 ];
 
 export const skills = [
-  ['Backend', 'Laravel, Spring Boot, Spring Security, Java, JPA / Hibernate, RESTful API design, service-layer architecture'],
-  ['Databases', 'MySQL, PostgreSQL, Elasticsearch, Redis, relational schema design'],
-  ['Frontend', 'React, JavaScript, HTML / CSS, SCSS'],
-  ['Languages', 'PHP, Java, Python, JavaScript, SQL, HTML / CSS'],
-  ['Tools', 'Docker, Composer, Git, GitHub Actions (CI), PHPUnit, Maven, Vite, pdf.js, Google Cloud Platform, AWS'],
-  ['Concepts', 'OOP, MVC, Agile, authentication & session management, concurrency, distributed systems'],
+  ['Languages', 'Java, Python, TypeScript, JavaScript, SQL, PHP, HTML / CSS'],
+  ['Backend', 'Spring Boot, Spring Security, Spring AI, JPA / Hibernate, FastAPI, Laravel, RESTful API design, service-layer architecture'],
+  ['Data & Frontend', 'PostgreSQL, MySQL, Redis, Elasticsearch, relational schema design; React, Vite, D3.js'],
+  ['Testing & Delivery', 'JUnit, pytest, PHPUnit, GitHub Actions CI, Docker, Git, Maven, Agile'],
+  ['Secure Coding', 'Authentication & session management, input validation, rate limiting, privacy-preserving handling of personal data'],
+  ['Cloud & AI', 'AWS (Certified Developer Associate), GCP, Cloudflare; LLM integration with Spring AI'],
 ];
 
 export const ledger = [
@@ -219,10 +219,10 @@ export const ledger = [
 ];
 
 export const tickerA = [
-  'LARAVEL', 'PHP', 'JAVA', 'SPRING BOOT', 'MYSQL', 'POSTGRESQL', 'ELASTICSEARCH', 'SPRING SECURITY',
-  'REACT', 'JPA / HIBERNATE', 'REST', 'SANCTUM', 'GIT', 'DOCKER', 'MAVEN', 'AWS',
+  'JAVA', 'PYTHON', 'TYPESCRIPT', 'PHP', 'SPRING BOOT', 'FASTAPI', 'REACT', 'LARAVEL', 'POSTGRESQL',
+  'MYSQL', 'REDIS', 'ELASTICSEARCH', 'DOCKER', 'GITHUB ACTIONS', 'AWS', 'SPRING AI',
 ];
 
 export const tickerB = [
-  'SCHEMA DESIGN', 'SERVICE LAYERS', 'AUTH & SESSIONS', 'CONCURRENCY', 'DISTRIBUTED SYSTEMS', 'OOP', 'MVC', 'AGILE',
+  'CLEAN CODE', 'SECURE CODING', 'WELL TESTED', 'SCHEMA DESIGN', 'AUTH & SESSIONS', 'CI', 'REQUIREMENTS TO LAUNCH', 'AGILE',
 ];

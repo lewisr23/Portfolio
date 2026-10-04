@@ -14,11 +14,10 @@ export default function Story() {
       <div className="story__grid">
         <div ref={textRef} className={`story__text ${textClass}`}>
           <p className="dropcap">
-            Backend is where I settled. Most of my time goes on the parts that decide whether a
-            system holds up: schemas with real constraints, service layers that keep their shape,
-            endpoints that do one thing. I like the part of the job where an ill-defined idea gets
-            pinned down into tables and contracts, because that is where most of the arguing
-            actually happens.
+            I work wherever the problem is: a data model, an API, a real-time rendering pipeline or
+            the interface someone actually clicks. What stays the same is the approach. Pin down
+            what the thing has to do, build it in whatever fits, and prove it with tests rather
+            than assume it works.
           </p>
           <p>
             That has meant building for other people, not just for marks. A gym in the North East
@@ -28,14 +27,14 @@ export default function Story() {
             MySQL and Elasticsearch with a React front end, live at restrum.uk.
           </p>
           <p>
-            I came to computing after a music degree and finished the MSc with a Distinction. I
-            build the front end too, React and usually Vite, because a backend nobody can touch is
-            just a very confident hypothesis.
+            I came to computing after a music degree and finished the MSc with a Distinction. Since
+            then I have written Java, Python, TypeScript and PHP for real users, and picked the
+            language to suit the job rather than the other way round.
           </p>
         </div>
 
         <blockquote ref={quoteRef} className={`pullquote ${quoteClass}`}>
-          “The data model is the argument. Everything after it is just typing.”
+          “A green build is a claim. The tests are the evidence.”
         </blockquote>
 
         <div ref={factRef} className={`factfile ${factClass}`}>
