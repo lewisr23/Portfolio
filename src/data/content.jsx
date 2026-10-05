@@ -38,18 +38,6 @@ export const schemaDiagram = `┌──────────┐        ┌─
 │ CONVERSATION │    │   PASSPORT   │◀── provenance
 └──────────────┘    └──────────────┘`;
 
-export const mandateDiagram = `STANDING ORDER REFERENCE
-┌──────┬─────────┬──────┐
-│  IF  │  M0142  │ GOLD │
-└──┬───┴────┬────┴───┬──┘
-   │        │        │
-   │        │        └─ plan tier
-   │        └─ member number
-   └─ club code
-
-CSV / PDF ─▶ parsed client-side
-          ─▶ matched to a member`;
-
 export const pipelineDiagram = `CLAIM ─▶ LOCK ROW ─▶ COMMIT
 
 ┌─────────┬─────────┬─────────┐
@@ -87,7 +75,7 @@ export const commissions = [
       { k: 'DATE', v: 'July 2026 to present' },
       { k: 'STATUS', v: 'SHIPPED, ONGOING', chip: true },
     ],
-    visual: 'mandate',
+    visual: null,
   },
 ];
 

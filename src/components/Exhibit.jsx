@@ -1,16 +1,11 @@
 import GlitchVideo from './GlitchVideo.jsx';
-import { schemaDiagram, mandateDiagram, pipelineDiagram } from '../data/content.jsx';
+import { schemaDiagram, pipelineDiagram } from '../data/content.jsx';
 import { useReveal } from '../hooks/useReveal.js';
 
 function Visual({ kind }) {
   if (kind === 'schema') {
     return (
       <pre className="schema" aria-label="Simplified entity diagram">{schemaDiagram}</pre>
-    );
-  }
-  if (kind === 'mandate') {
-    return (
-      <pre className="schema" aria-label="Standing order reference format">{mandateDiagram}</pre>
     );
   }
   if (kind === 'pipeline') {
