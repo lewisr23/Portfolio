@@ -24,30 +24,6 @@ export const factFile = [
   ['Shipped & live', 'restrum.uk, staticgrind.com'],
 ];
 
-export const schemaDiagram = `┌──────────┐        ┌──────────────┐
-│   USER   │───1:N─▶│   LISTING    │
-└────┬─────┘        └──────┬───────┘
-     │ 1:N                 │ 1:N
-     ▼                     ▼
-┌──────────┐        ┌──────────────┐
-│ MESSAGE  │        │ LISTINGMEDIA │
-└────┬─────┘        └──────────────┘
-     │ N:1
-     ▼
-┌──────────────┐    ┌──────────────┐
-│ CONVERSATION │    │   PASSPORT   │◀── provenance
-└──────────────┘    └──────────────┘`;
-
-export const pipelineDiagram = `CLAIM ─▶ LOCK ROW ─▶ COMMIT
-
-┌─────────┬─────────┬─────────┐
-│  MAIL   │ NOTIFY  │  INDEX  │
-└─────────┴─────────┴─────────┘
-      REDIS QUEUE · OWN CONTAINER
-
-SYNC   stock never oversold
-ASYNC  everything else`;
-
 export const commissions = [
   {
     id: 'infinity-fitness',
@@ -75,7 +51,6 @@ export const commissions = [
       { k: 'DATE', v: 'July 2026 to present' },
       { k: 'STATUS', v: 'SHIPPED, ONGOING', chip: true },
     ],
-    visual: null,
   },
 ];
 
@@ -106,7 +81,6 @@ export const exhibits = [
       { k: 'DATE', v: 'May to Aug 2026' },
       { k: 'STATUS', v: 'LIVE', chip: true, chipVariant: 'live' },
     ],
-    visual: 'schema',
   },
   {
     id: 'staticgrind',
@@ -133,7 +107,6 @@ export const exhibits = [
       { k: 'DATE', v: 'May to Aug 2026' },
       { k: 'STATUS', v: 'LIVE', chip: true, chipVariant: 'live' },
     ],
-    visual: 'glitch',
   },
   {
     id: 'seedle',
@@ -161,7 +134,6 @@ export const exhibits = [
       { k: 'DATE', v: 'Sept 2026' },
       { k: 'STATUS', v: 'BUILT', chip: true },
     ],
-    visual: 'pipeline',
   },
 ];
 

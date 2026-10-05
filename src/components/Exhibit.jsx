@@ -1,24 +1,7 @@
-import GlitchVideo from './GlitchVideo.jsx';
-import { schemaDiagram, pipelineDiagram } from '../data/content.jsx';
 import { useReveal } from '../hooks/useReveal.js';
 
-function Visual({ kind }) {
-  if (kind === 'schema') {
-    return (
-      <pre className="schema" aria-label="Simplified entity diagram">{schemaDiagram}</pre>
-    );
-  }
-  if (kind === 'pipeline') {
-    return (
-      <pre className="schema" aria-label="Claim and checkout pipeline">{pipelineDiagram}</pre>
-    );
-  }
-  if (kind === 'glitch') return <GlitchVideo />;
-  return null;
-}
-
 export default function Exhibit({ exhibit }) {
-  const { id, tint, title, sub, prose, checks, link, specimen, visual } = exhibit;
+  const { id, tint, title, sub, prose, checks, link, specimen } = exhibit;
   const [headRef, headClass] = useReveal();
   const [bodyRef, bodyClass] = useReveal();
 
@@ -61,7 +44,6 @@ export default function Exhibit({ exhibit }) {
               </div>
             ))}
           </dl>
-          <Visual kind={visual} />
         </div>
       </div>
     </article>

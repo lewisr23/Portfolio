@@ -327,8 +327,8 @@ img{ max-width:100%; }
   display:grid;
   grid-template-columns: minmax(0,1.15fr) minmax(0,1fr);
 }
-/* grid items default to min-width:auto, which lets the schema block push the
-   whole page wider than the viewport; this lets it scroll inside itself instead */
+/* grid items default to min-width:auto, which lets long unbroken content push
+   the whole page wider than the viewport */
 .exhibit__body > *{ min-width:0; }
 .exhibit__prose{ padding: clamp(18px,2.6vw,30px); border-right:var(--edge) solid var(--ink); }
 .exhibit__prose p{ font-size:1.04rem; }
@@ -361,21 +361,6 @@ img{ max-width:100%; }
   padding:3px 8px; font-size:.64rem; letter-spacing:.14em;
 }
 .chip--live{ background:var(--b); }
-
-.schema{
-  margin:0; padding:16px;
-  background:var(--ink); color:var(--paper);
-  font-family:var(--mono); font-size:.66rem; line-height:1.35;
-  overflow-x:auto;
-}
-:root[data-ink="night"] .schema{ border:1px solid var(--hair); }
-
-.glitch-box{ margin:0; border:var(--edge) solid var(--ink); background:var(--ink); }
-.glitch-box video{ display:block; width:100%; height:auto; }
-.glitch-box figcaption{
-  font-family:var(--mono); font-size:.6rem; letter-spacing:.16em;
-  color:var(--paper); padding:7px 10px; border-top:1px solid rgba(255,255,255,.25);
-}
 
 /* ── spec label ───────────────────────────────────────── */
 .label{
