@@ -9,7 +9,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="plate contact">
-      <Rubric no="06" title="Get In Touch" inverted />
+      <Rubric title="Get In Touch" inverted />
 
       <p className="contact__intro">
         Open to graduate and junior software engineering roles. Quickest route is email, and I

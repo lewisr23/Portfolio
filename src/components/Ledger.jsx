@@ -6,16 +6,16 @@ export default function Ledger() {
   const [ref, revealClass] = useReveal();
 
   return (
-    <section id="ledger" className="plate ledger">
-      <Rubric no="05" title="Ledger" />
+    <section id="education" className="plate ledger">
+      <Rubric title="Education & Certifications" />
 
       <table ref={ref} className={`ledger__table ${revealClass}`}>
         <thead>
           <tr>
             <th scope="col">Year</th>
-            <th scope="col">Entry</th>
+            <th scope="col">Qualification</th>
             <th scope="col">Institution</th>
-            <th scope="col">Note</th>
+            <th scope="col">Details</th>
           </tr>
         </thead>
         <tbody>

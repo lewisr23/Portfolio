@@ -39,7 +39,7 @@ export default function Hero() {
             team build, and a browser tool with a couple of hundred users.
           </p>
           <div className="hero__cta">
-            <a className="slab slab--fill" href="#work">SEE THE WORK ↓</a>
+            <a className="slab slab--fill" href="#projects">SEE PROJECTS ↓</a>
             <a className="slab" href={cvUrl} download="Lewis_Robinson_CV.docx">DOWNLOAD CV</a>
           </div>
         </div>

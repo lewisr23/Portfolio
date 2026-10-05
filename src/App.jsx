@@ -11,7 +11,7 @@ import { useInk } from './hooks/useInk.js';
 import { commissions, exhibits, tickerA, tickerB } from './data/content.jsx';
 
 export default function App() {
-  const [, nextInk] = useInk();
+  const [ink, nextInk] = useInk();
 
   return (
     <>
@@ -22,7 +22,7 @@ export default function App() {
         <span className="reg reg--br" />
       </div>
 
-      <Masthead onSwapInk={nextInk} />
+      <Masthead ink={ink} onSwapInk={nextInk} />
 
       <main id="top">
         <Hero />
@@ -32,14 +32,14 @@ export default function App() {
         <Story />
 
         <section id="client" className="plate work">
-          <Rubric no="02" title="Commissioned" />
+          <Rubric title="Client Work" />
           {commissions.map((commission) => (
             <Exhibit key={commission.id} exhibit={commission} />
           ))}
         </section>
 
-        <section id="work" className="plate work">
-          <Rubric no="03" title="Exhibits A to C" />
+        <section id="projects" className="plate work">
+          <Rubric title="Projects" />
           {exhibits.map((exhibit) => (
             <Exhibit key={exhibit.id} exhibit={exhibit} />
           ))}
@@ -52,11 +52,8 @@ export default function App() {
         <Contact />
       </main>
 
-      <footer className="colophon">
-        <p>
-          <b>COLOPHON</b>. Set in Anton, Newsreader and IBM Plex Mono. Built with React, Vite and a
-          small amount of canvas.
-        </p>
+      <footer className="site-footer">
+        <p>Built with React and Vite.</p>
         <p>© {new Date().getFullYear()} Lewis Robinson · Newcastle upon Tyne</p>
       </footer>
     </>

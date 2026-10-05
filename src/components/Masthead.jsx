@@ -1,6 +1,13 @@
-const NAV = ['Story', 'Client', 'Work', 'Spec', 'Ledger', 'Contact'];
+const NAV = [
+  ['About', 'about'],
+  ['Client', 'client'],
+  ['Projects', 'projects'],
+  ['Skills', 'skills'],
+  ['Education', 'education'],
+  ['Contact', 'contact'],
+];
 
-export default function Masthead({ onSwapInk }) {
+export default function Masthead({ ink, onSwapInk }) {
   return (
     <header className="masthead">
       <a className="monogram" href="#top">LR</a>
@@ -8,11 +15,13 @@ export default function Masthead({ onSwapInk }) {
         PORTFOLIO
       </p>
       <nav className="masthead__nav">
-        {NAV.map((item) => (
-          <a key={item} href={`#${item.toLowerCase()}`}>{item}</a>
+        {NAV.map(([label, id]) => (
+          <a key={id} href={`#${id}`}>{label}</a>
         ))}
       </nav>
-      <button className="ink-swap" type="button" onClick={onSwapInk}>◐ SWAP INK</button>
+      <button className="ink-swap" type="button" onClick={onSwapInk}>
+        {ink === 'night' ? '◐ LIGHT MODE' : '◐ DARK MODE'}
+      </button>
     </header>
   );
 }

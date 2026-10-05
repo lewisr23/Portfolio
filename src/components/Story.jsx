@@ -7,8 +7,8 @@ export default function Story() {
   const [factRef, factClass] = useReveal();
 
   return (
-    <section id="story" className="plate story">
-      <Rubric no="01" title="How I Work" />
+    <section id="about" className="plate story">
+      <Rubric title="About" />
 
       <div className="story__grid">
         <div ref={textRef} className={`story__text ${textClass}`}>

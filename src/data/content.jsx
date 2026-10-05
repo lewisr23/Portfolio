@@ -63,7 +63,6 @@ ASYNC  everything else`;
 export const commissions = [
   {
     id: 'infinity-fitness',
-    letter: 'IF',
     tint: 'c',
     title: 'Infinity Fitness',
     sub: 'Gym and sports medicine clinic · paid client work',
@@ -95,7 +94,6 @@ export const commissions = [
 export const exhibits = [
   {
     id: 'restrum',
-    letter: 'A',
     tint: 'a',
     title: 'Restrum',
     sub: 'Online instrument marketplace · live at restrum.uk',
@@ -124,7 +122,6 @@ export const exhibits = [
   },
   {
     id: 'staticgrind',
-    letter: 'B',
     tint: 'b',
     title: 'StaticGrind',
     sub: 'Real-time browser graphics tool · 200+ users',
@@ -152,7 +149,6 @@ export const exhibits = [
   },
   {
     id: 'seedle',
-    letter: 'C',
     tint: 'c',
     title: 'Seedle',
     sub: 'Gardening swap and planning platform · Laravel, MySQL, Elasticsearch',

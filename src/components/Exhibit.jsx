@@ -23,14 +23,13 @@ function Visual({ kind }) {
 }
 
 export default function Exhibit({ exhibit }) {
-  const { id, letter, tint, title, sub, prose, checks, link, specimen, visual } = exhibit;
+  const { id, tint, title, sub, prose, checks, link, specimen, visual } = exhibit;
   const [headRef, headClass] = useReveal();
   const [bodyRef, bodyClass] = useReveal();
 
   return (
     <article id={id} className={`exhibit exhibit--${tint}`}>
       <header ref={headRef} className={`exhibit__head ${headClass}`}>
-        <span className="exhibit__letter">{letter}</span>
         <div>
           <h3 className="exhibit__title">{title}</h3>
           <p className="exhibit__sub">{sub}</p>
