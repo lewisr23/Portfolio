@@ -154,7 +154,7 @@ export const ledger = [
     note: 'Grade Distinction · Advanced Programming · Database Systems · Software Engineering & Team Project · Web Technologies · Computer Networks · Cybersecurity · AI Fundamentals · HCI',
   },
   {
-    year: '2021/24',
+    year: '2022/25',
     entry: 'BA (Hons) Contemporary Music',
     place: 'Newcastle University',
     note: 'Completed',
