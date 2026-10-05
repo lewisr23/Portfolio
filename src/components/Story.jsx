@@ -4,7 +4,6 @@ import { useReveal } from '../hooks/useReveal.js';
 
 export default function Story() {
   const [textRef, textClass] = useReveal();
-  const [quoteRef, quoteClass] = useReveal();
   const [factRef, factClass] = useReveal();
 
   return (
@@ -32,10 +31,6 @@ export default function Story() {
             language to suit the job rather than the other way round.
           </p>
         </div>
-
-        <blockquote ref={quoteRef} className={`pullquote ${quoteClass}`}>
-          “A green build is a claim. The tests are the evidence.”
-        </blockquote>
 
         <div ref={factRef} className={`factfile ${factClass}`}>
           <h3 className="factfile__title">INFO</h3>
