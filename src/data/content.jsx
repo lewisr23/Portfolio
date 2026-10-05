@@ -80,7 +80,7 @@ export const commissions = [
       'Browser-based tool that parses CSV and PDF bank statements client-side with pdf.js',
       'Flags lapsed standing orders and outdated prices, with no member data leaving the device',
     ],
-    link: null,
+    link: { href: 'https://infinityfitnessgym.uk', label: 'OPEN THE LIVE SITE ↗' },
     specimen: [
       { k: 'CLIENT', v: 'Infinity Fitness Gym & Sports Medicine Clinic' },
       { k: 'ROLE', v: 'Sole developer, direct client work' },
