@@ -312,7 +312,7 @@ img{ max-width:100%; }
   display:flex; align-items:stretch; gap:0;
   border-bottom:var(--edge) solid var(--ink);
 }
-.exhibit--a .exhibit--b .exhibit--c .exhibit__head > div{ padding:14px clamp(14px,2.4vw,26px); display:flex; flex-direction:column; justify-content:center; }
+.exhibit__head > div{ padding:clamp(14px,2vw,22px) clamp(18px,2.6vw,30px); display:flex; flex-direction:column; justify-content:center; }
 .exhibit__title{
   font-family:var(--display); text-transform:uppercase;
   font-size:clamp(1.6rem,4vw,3rem); line-height:1;
@@ -419,7 +419,7 @@ img{ max-width:100%; }
 
 /* ── contact ──────────────────────────────────────────── */
 .contact{ background:var(--ink); color:var(--paper); position:relative; }
-.rubric--inv .rubric--inv .rubric__rule{ border-top-color:var(--paper); }
+.rubric--inv .rubric__rule{ border-top-color:var(--paper); }
 .contact__intro{ max-width:56ch; font-size:1.1rem; }
 .contact__mail{
   display:block;
