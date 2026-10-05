@@ -10,7 +10,7 @@ export const profile = {
 };
 
 export const contactStrip = [
-  { label: 'EMAIL', value: 'lewisrobinson.cs', href: `mailto:${profile.email}` },
+  { label: 'EMAIL', value: profile.email, href: `mailto:${profile.email}` },
   { label: 'GITHUB', value: profile.handle, href: profile.github },
   { label: 'LINKEDIN', value: profile.handle, href: profile.linkedin },
 ];
