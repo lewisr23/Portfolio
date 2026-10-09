@@ -135,6 +135,33 @@ export const exhibits = [
       { k: 'STATUS', v: 'BUILT', chip: true },
     ],
   },
+  {
+    id: 'family-tree',
+    tint: 'a',
+    title: 'Family Tree Viewer',
+    sub: 'GEDCOM family tree viewer and print exporter · Python, FastAPI, D3.js',
+    prose: (
+      <>
+        Upload a GEDCOM file, the format every genealogy site exports, and explore the tree in the
+        browser. Pan and zoom an ancestor chart, click anyone for a timeline of their life with the
+        sources behind it, and export an A2 poster, a PDF per generation or a migration map. No
+        account and nothing stored: trees are held in memory and gone when the session ends.
+      </>
+    ),
+    checks: [
+      'GEDCOM parser written from scratch that tracks nesting depth, fixing 90 events in a real 144-person Ancestry export that had been given the wrong source citations',
+      'Place-name geocoding with progressive fallback, raising the match rate from 60% to 94%',
+      'FastAPI with signed-cookie sessions held in memory only, PDF exports kept off the event loop, and per-caller rate limiting on the shared geocoder',
+      'ReportLab A2 posters and per-generation PDFs, D3.js charts, 127 pytest tests, Docker',
+    ],
+    link: { href: 'https://github.com/lewisr23/gedcom-family-tree', label: 'VIEW THE REPO ↗' },
+    specimen: [
+      { k: 'STACK', v: 'Python · FastAPI · D3.js · ReportLab' },
+      { k: 'ROLE', v: 'Sole engineer' },
+      { k: 'DATE', v: 'Sept 2026 to present' },
+      { k: 'STATUS', v: 'IN PROGRESS', chip: true },
+    ],
+  },
 ];
 
 export const skills = [
@@ -180,5 +207,6 @@ export const tickerA = [
 ];
 
 export const tickerB = [
-  'CLEAN CODE', 'SECURE CODING', 'WELL TESTED', 'SCHEMA DESIGN', 'AUTH & SESSIONS', 'CI', 'REQUIREMENTS TO LAUNCH', 'AGILE',
+  'JAVASCRIPT', 'SQL', 'SPRING SECURITY', 'JPA / HIBERNATE', 'VITE', 'D3.JS', 'WEBGL', 'JUNIT', 'PYTEST',
+  'PHPUNIT', 'MAVEN', 'GIT', 'STRIPE', 'CLOUDFLARE', 'GCP',
 ];

@@ -118,11 +118,11 @@ img{ max-width:100%; }
 .masthead__nav a:hover{ background:var(--ink); color:var(--paper); }
 .ink-swap{
   font-family:var(--mono); font-size:.7rem; font-weight:600; letter-spacing:.14em;
-  background:var(--a); color:var(--ink);
+  background:var(--ink); color:var(--paper);
   border:none; border-left:var(--edge) solid var(--ink);
   padding:0 16px; cursor:pointer;
 }
-.ink-swap:hover{ background:var(--b); color:var(--paper); }
+.ink-swap:hover{ background:var(--paper); color:var(--ink); }
 
 /* ── shared slab button ───────────────────────────────── */
 .slab{
@@ -208,8 +208,8 @@ img{ max-width:100%; }
 
 .stamp-wrap{ display:flex; flex-direction:column; gap:22px; align-items:flex-start; }
 .stamp{
-  border:4px double var(--a);
-  color:var(--a);
+  border:4px double var(--ink);
+  color:var(--ink);
   padding:12px 20px;
   text-align:center;
   font-family:var(--mono);
@@ -237,8 +237,8 @@ img{ max-width:100%; }
   padding:9px 0;
   margin: 30px 0 0;
 }
-.ticker--a{ background:var(--ink); color:var(--paper); }
-.ticker--b{ background:var(--b); color:var(--paper); }
+.ticker--a,
+.ticker--b{ background:var(--ink); color:var(--paper); }
 .ticker__track{ display:flex; width:max-content; animation: slide 34s linear infinite; }
 .ticker__track--rev{ animation-duration:26s; animation-direction:reverse; }
 .ticker__group{
@@ -246,8 +246,7 @@ img{ max-width:100%; }
   font-family:var(--display); font-size:1.25rem; letter-spacing:.06em; text-transform:uppercase;
   white-space:nowrap;
 }
-.ticker--a b{ color:var(--a); }
-.ticker--b b{ color:var(--paper); opacity:.55; }
+.ticker__group b{ opacity:.55; }
 @keyframes slide{ to{ transform:translateX(-50%); } }
 
 /* ── plates & rubrics ─────────────────────────────────── */
